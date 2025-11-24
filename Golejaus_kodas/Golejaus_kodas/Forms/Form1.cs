@@ -14,7 +14,7 @@ namespace Golejaus_kodas
 
         private void submitScenarioButton_Click(object sender, EventArgs e)
         {
-            string selectedScenario = choiceComboBox.SelectedItem as string;
+            var selectedScenario = choiceComboBox.SelectedItem;
             switch(selectedScenario)
             {
                 case "Scenario 1":
