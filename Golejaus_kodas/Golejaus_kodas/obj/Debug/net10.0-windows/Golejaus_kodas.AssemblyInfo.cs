@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Golejaus_kodas")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+acf86f6531cd68b27308db87e4b384c67dd4c8cc")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bcc971450884426162f35f67db7d680a2f297357")]
 [assembly: System.Reflection.AssemblyProductAttribute("Golejaus_kodas")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Golejaus_kodas")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
