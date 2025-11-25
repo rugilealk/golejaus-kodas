@@ -5,12 +5,12 @@ using System.Text;
 
 namespace Golejaus_kodas.Channel
 {
-    public class Channel
+    public class ChannelWithError
     {
         private Random randomNumberGenerator = GlobalRandomiser.RandomGenerator;
         private float errorProbability;
 
-        public Channel(float errorProbability)
+        public void setErrorProbability(float errorProbability)
         {
             if (errorProbability < 0 || errorProbability > 1)
             {
