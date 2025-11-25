@@ -6,7 +6,7 @@ namespace Golejaus_kodas.GolayCode
 {
     internal class Matrices
     {
-        //the generating matrix G and the control(parity-check) matrix H for the (23,12) Golay code
+        //the generating 12x23 matrix G and the control(parity-check) 24x12 matrix H for the Golay code
         public byte[,] G =
         {
             {1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 0, 0, 0, 1, 0},
@@ -51,5 +51,22 @@ namespace Golejaus_kodas.GolayCode
             { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0}
 
         };
+
+        public byte[,] B =
+        {
+            { 1, 1, 0, 1, 1, 1, 0, 0, 0, 1, 0, 1},
+            { 1, 0, 1, 1, 1, 0, 0, 0, 1, 0, 1, 1},
+            { 0, 1, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1},
+            { 1, 1, 1, 0, 0, 0, 1, 0, 1, 1, 0, 1},
+            { 1, 1, 0, 0, 0, 1, 0, 1, 1, 0, 1, 1},
+            { 1, 0, 0, 0, 1, 0, 1, 1, 0, 1, 1, 1},
+            { 0, 0, 0, 1, 0, 1, 1, 0, 1, 1, 1, 1},
+            { 0, 0, 1, 0, 1, 1, 0, 1, 1, 1, 0, 1},
+            { 0, 1, 0, 1, 1, 0, 1, 1, 1, 0, 0, 1},
+            { 1, 0, 1, 1, 0, 1, 1, 1, 0, 0, 0, 1},
+            { 0, 1, 1, 0, 1, 1, 1, 0, 0, 0, 1, 1},
+            { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0}
+        };
+        //TODO: prideti matrica B
     }
 }
