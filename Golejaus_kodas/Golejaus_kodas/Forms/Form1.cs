@@ -15,7 +15,7 @@ namespace Golejaus_kodas
         private void submitScenarioButton_Click(object sender, EventArgs e)
         {
             var selectedScenario = choiceComboBox.SelectedItem;
-            switch(selectedScenario)
+            switch (selectedScenario)
             {
                 case "Scenario 1":
                     Form scenario1Form = new Forms.Scenario1();
@@ -37,8 +37,12 @@ namespace Golejaus_kodas
                     break;
             }
 
-            
+
         }
 
+        private void exitButton_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

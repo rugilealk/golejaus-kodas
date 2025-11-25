@@ -32,6 +32,7 @@
             submitScenarioButton = new Button();
             choiceLabel = new Label();
             label1 = new Label();
+            exitButton = new Button();
             SuspendLayout();
             // 
             // choiceComboBox
@@ -53,7 +54,7 @@
             submitScenarioButton.TabIndex = 1;
             submitScenarioButton.Text = "Submit choice";
             submitScenarioButton.UseVisualStyleBackColor = true;
-            submitScenarioButton.Click += this.submitScenarioButton_Click;
+            submitScenarioButton.Click += submitScenarioButton_Click;
             // 
             // choiceLabel
             // 
@@ -75,11 +76,25 @@
             label1.TabIndex = 3;
             label1.Text = "Welcome";
             // 
+            // exitButton
+            // 
+            exitButton.BackColor = Color.FromArgb(192, 0, 0);
+            exitButton.Font = new Font("Tahoma", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            exitButton.ForeColor = SystemColors.ButtonHighlight;
+            exitButton.Location = new Point(280, 333);
+            exitButton.Name = "exitButton";
+            exitButton.Size = new Size(217, 41);
+            exitButton.TabIndex = 4;
+            exitButton.Text = "Exit program";
+            exitButton.UseVisualStyleBackColor = false;
+            exitButton.Click += exitButton_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(exitButton);
             Controls.Add(label1);
             Controls.Add(choiceLabel);
             Controls.Add(submitScenarioButton);
@@ -96,5 +111,6 @@
         private Button submitScenarioButton;
         private Label choiceLabel;
         private Label label1;
+        private Button exitButton;
     }
 }
