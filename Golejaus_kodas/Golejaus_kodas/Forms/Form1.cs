@@ -29,8 +29,8 @@ namespace Golejaus_kodas
                     break;
                 case "Scenario 3":
                     Form scenario3Form = new Forms.Scenario3();
-                    scenario3Form.Show();
                     this.Hide();
+                    scenario3Form.Show();
                     break;
                 default:
                     MessageBox.Show("Please select a valid scenario.");
@@ -42,7 +42,7 @@ namespace Golejaus_kodas
 
         private void exitButton_Click(object sender, EventArgs e)
         {
-            Close();
+            Application.Exit();
         }
     }
 }

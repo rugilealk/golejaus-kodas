@@ -28,12 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Scenario1";
+            exitButton = new Button();
+            SuspendLayout();
+            // 
+            // exitButton
+            // 
+            exitButton.BackColor = Color.FromArgb(192, 0, 0);
+            exitButton.Font = new Font("Tahoma", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            exitButton.ForeColor = SystemColors.ButtonHighlight;
+            exitButton.Location = new Point(532, 368);
+            exitButton.Name = "exitButton";
+            exitButton.Size = new Size(217, 41);
+            exitButton.TabIndex = 5;
+            exitButton.Text = "Exit program";
+            exitButton.UseVisualStyleBackColor = false;
+            exitButton.Click += exitButton_Click;
+            // 
+            // Scenario1
+            // 
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(800, 450);
+            Controls.Add(exitButton);
+            Name = "Scenario1";
+            Text = "Scenario1";
+            ResumeLayout(false);
         }
 
         #endregion
+
+        private Button exitButton;
     }
 }
