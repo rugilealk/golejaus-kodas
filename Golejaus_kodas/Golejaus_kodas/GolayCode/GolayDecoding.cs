@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Golejaus_kodas.GolayCode
 {
-    internal class Decoding
+    internal class GolayDecoding
     {
     }
 }

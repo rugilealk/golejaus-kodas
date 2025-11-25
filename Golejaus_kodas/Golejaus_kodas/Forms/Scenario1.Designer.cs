@@ -39,6 +39,10 @@
             probabilityErrorWarning = new Label();
             vectorWarning = new Label();
             encodeButton = new Button();
+            label10 = new Label();
+            encodedVectorLabel = new Label();
+            label3 = new Label();
+            button1 = new Button();
             SuspendLayout();
             // 
             // exitButton
@@ -136,18 +140,66 @@
             // 
             // encodeButton
             // 
-            encodeButton.Location = new Point(125, 371);
+            encodeButton.BackColor = Color.YellowGreen;
+            encodeButton.Font = new Font("Tahoma", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            encodeButton.ForeColor = SystemColors.ButtonHighlight;
+            encodeButton.Location = new Point(382, 68);
             encodeButton.Name = "encodeButton";
             encodeButton.Size = new Size(180, 49);
             encodeButton.TabIndex = 15;
             encodeButton.Text = "Encode the vector with Golay code";
-            encodeButton.UseVisualStyleBackColor = true;
+            encodeButton.UseVisualStyleBackColor = false;
+            encodeButton.Click += encodeButton_Click;
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Location = new Point(382, 120);
+            label10.Name = "label10";
+            label10.Size = new Size(119, 20);
+            label10.TabIndex = 16;
+            label10.Text = "Encoded vector: ";
+            label10.Click += encodedVectorLabel_Click;
+            // 
+            // encodedVectorLabel
+            // 
+            encodedVectorLabel.AutoSize = true;
+            encodedVectorLabel.Location = new Point(521, 120);
+            encodedVectorLabel.Name = "encodedVectorLabel";
+            encodedVectorLabel.Size = new Size(0, 20);
+            encodedVectorLabel.TabIndex = 17;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(378, 233);
+            label3.Name = "label3";
+            label3.Size = new Size(117, 20);
+            label3.TabIndex = 18;
+            label3.Text = "Received vector:";
+            label3.Click += label3_Click;
+            // 
+            // button1
+            // 
+            button1.BackColor = Color.YellowGreen;
+            button1.Font = new Font("Tahoma", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button1.ForeColor = SystemColors.ButtonHighlight;
+            button1.Location = new Point(378, 166);
+            button1.Name = "button1";
+            button1.Size = new Size(174, 57);
+            button1.TabIndex = 19;
+            button1.Text = "Send vector through channel";
+            button1.UseVisualStyleBackColor = false;
             // 
             // Scenario1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(button1);
+            Controls.Add(label3);
+            Controls.Add(encodedVectorLabel);
+            Controls.Add(label10);
             Controls.Add(encodeButton);
             Controls.Add(vectorWarning);
             Controls.Add(probabilityErrorWarning);
@@ -180,5 +232,8 @@
         private Label probabilityErrorWarning;
         private Label vectorWarning;
         private Button encodeButton;
+        private Label label10;
+        private Label encodedVectorLabel;
+        private Label label3;
     }
 }
