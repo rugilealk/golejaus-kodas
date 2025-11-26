@@ -8,6 +8,7 @@ using System.Windows.Forms;
 using Golejaus_kodas.Validation;
 using Golejaus_kodas.Channel;
 using Golejaus_kodas.GolayCode;
+using Golejaus_kodas.Helpers;
 
 namespace Golejaus_kodas.Forms
 {
@@ -17,6 +18,7 @@ namespace Golejaus_kodas.Forms
         private float errorProbability;
         private byte[] inputVector = new byte[12];
         private byte[] encodedVector = new byte[23];
+        private byte[] receivedVector = new byte[23];
 
         public Scenario1()
         {
@@ -82,13 +84,18 @@ namespace Golejaus_kodas.Forms
             encodeButton.Enabled = false;
             GolayEncoding encoder = new GolayEncoding();
             encodedVector = encoder.encodeVector(inputVector);
-            char[] encodedVectorCharArray = new char[23];
-            for(int i=0; i<encodedVector.Length; ++i)
-            {
-                encodedVectorCharArray[i] = (char)(encodedVector[i] + '0');
-            }
 
-            encodedVectorLabel.Text = new string(encodedVectorCharArray);
+            encodedVectorLabel.Text = VectorToString.convertVectorToString(encodedVector);
+            sendVectorButton.Enabled = true;
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            sendVectorButton.Enabled = false;
+            receivedVector = channel.SendThroughChannel(encodedVector);
+
+            receivedVectorLabel.Text = VectorToString.convertVectorToString(receivedVector);
 
         }
     }

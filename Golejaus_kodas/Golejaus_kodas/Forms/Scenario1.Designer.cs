@@ -42,7 +42,8 @@
             label10 = new Label();
             encodedVectorLabel = new Label();
             label3 = new Label();
-            button1 = new Button();
+            sendVectorButton = new Button();
+            receivedVectorLabel = new Label();
             SuspendLayout();
             // 
             // exitButton
@@ -179,24 +180,35 @@
             label3.Text = "Received vector:";
             label3.Click += label3_Click;
             // 
-            // button1
+            // sendVectorButton
             // 
-            button1.BackColor = Color.YellowGreen;
-            button1.Font = new Font("Tahoma", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.ForeColor = SystemColors.ButtonHighlight;
-            button1.Location = new Point(378, 166);
-            button1.Name = "button1";
-            button1.Size = new Size(174, 57);
-            button1.TabIndex = 19;
-            button1.Text = "Send vector through channel";
-            button1.UseVisualStyleBackColor = false;
+            sendVectorButton.BackColor = Color.YellowGreen;
+            sendVectorButton.Enabled = false;
+            sendVectorButton.Font = new Font("Tahoma", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            sendVectorButton.ForeColor = SystemColors.ButtonHighlight;
+            sendVectorButton.Location = new Point(378, 166);
+            sendVectorButton.Name = "sendVectorButton";
+            sendVectorButton.Size = new Size(174, 57);
+            sendVectorButton.TabIndex = 19;
+            sendVectorButton.Text = "Send vector through channel";
+            sendVectorButton.UseVisualStyleBackColor = false;
+            sendVectorButton.Click += button1_Click;
+            // 
+            // receivedVectorLabel
+            // 
+            receivedVectorLabel.AutoSize = true;
+            receivedVectorLabel.Location = new Point(501, 233);
+            receivedVectorLabel.Name = "receivedVectorLabel";
+            receivedVectorLabel.Size = new Size(0, 20);
+            receivedVectorLabel.TabIndex = 20;
             // 
             // Scenario1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(button1);
+            Controls.Add(receivedVectorLabel);
+            Controls.Add(sendVectorButton);
             Controls.Add(label3);
             Controls.Add(encodedVectorLabel);
             Controls.Add(label10);
@@ -223,7 +235,7 @@
         private Label firstScenarioLabel;
         private Label label1;
         private TextBox textBox1;
-        private Button button1;
+        private Button sendVectorButton;
         private Label label2;
         private TextBox vectorTextBox;
         private Button submitVectorButton;
@@ -235,5 +247,6 @@
         private Label label10;
         private Label encodedVectorLabel;
         private Label label3;
+        private Label receivedVectorLabel;
     }
 }
