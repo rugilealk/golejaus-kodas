@@ -67,6 +67,5 @@ namespace Golejaus_kodas.GolayCode
             { 0, 1, 1, 0, 1, 1, 1, 0, 0, 0, 1, 1},
             { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0}
         };
-        //TODO: prideti matrica B
     }
 }

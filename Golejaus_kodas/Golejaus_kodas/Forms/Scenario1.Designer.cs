@@ -44,6 +44,18 @@
             label3 = new Label();
             sendVectorButton = new Button();
             receivedVectorLabel = new Label();
+            label4 = new Label();
+            label5 = new Label();
+            numberOfErrorsLabel = new Label();
+            errorPositionsLabel = new Label();
+            label6 = new Label();
+            label7 = new Label();
+            label8 = new Label();
+            label9 = new Label();
+            editVectorTextBox = new TextBox();
+            submitEditedVectorButton = new Button();
+            editVectorWarning = new Label();
+            label11 = new Label();
             SuspendLayout();
             // 
             // exitButton
@@ -63,11 +75,12 @@
             // 
             firstScenarioLabel.AutoSize = true;
             firstScenarioLabel.Font = new Font("Tahoma", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            firstScenarioLabel.Location = new Point(12, 18);
+            firstScenarioLabel.Location = new Point(193, 9);
             firstScenarioLabel.Name = "firstScenarioLabel";
             firstScenarioLabel.Size = new Size(359, 30);
             firstScenarioLabel.TabIndex = 6;
             firstScenarioLabel.Text = "First scenario - vector input";
+            firstScenarioLabel.Click += firstScenarioLabel_Click;
             // 
             // label1
             // 
@@ -82,7 +95,8 @@
             // 
             probabilityTextBox.Location = new Point(12, 101);
             probabilityTextBox.Name = "probabilityTextBox";
-            probabilityTextBox.Size = new Size(202, 27);
+            probabilityTextBox.PlaceholderText = "Enter number between 0 and 1";
+            probabilityTextBox.Size = new Size(222, 27);
             probabilityTextBox.TabIndex = 8;
             // 
             // submitErrorButton
@@ -106,13 +120,16 @@
             // 
             // vectorTextBox
             // 
+            vectorTextBox.Enabled = false;
             vectorTextBox.Location = new Point(12, 233);
             vectorTextBox.Name = "vectorTextBox";
-            vectorTextBox.Size = new Size(308, 27);
+            vectorTextBox.PlaceholderText = "Max length 12";
+            vectorTextBox.Size = new Size(222, 27);
             vectorTextBox.TabIndex = 11;
             // 
             // submitVectorButton
             // 
+            submitVectorButton.Enabled = false;
             submitVectorButton.Location = new Point(12, 266);
             submitVectorButton.Name = "submitVectorButton";
             submitVectorButton.Size = new Size(94, 29);
@@ -142,9 +159,10 @@
             // encodeButton
             // 
             encodeButton.BackColor = Color.YellowGreen;
+            encodeButton.Enabled = false;
             encodeButton.Font = new Font("Tahoma", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             encodeButton.ForeColor = SystemColors.ButtonHighlight;
-            encodeButton.Location = new Point(382, 68);
+            encodeButton.Location = new Point(12, 343);
             encodeButton.Name = "encodeButton";
             encodeButton.Size = new Size(180, 49);
             encodeButton.TabIndex = 15;
@@ -155,7 +173,7 @@
             // label10
             // 
             label10.AutoSize = true;
-            label10.Location = new Point(382, 120);
+            label10.Location = new Point(12, 395);
             label10.Name = "label10";
             label10.Size = new Size(119, 20);
             label10.TabIndex = 16;
@@ -165,7 +183,7 @@
             // encodedVectorLabel
             // 
             encodedVectorLabel.AutoSize = true;
-            encodedVectorLabel.Location = new Point(521, 120);
+            encodedVectorLabel.Location = new Point(151, 395);
             encodedVectorLabel.Name = "encodedVectorLabel";
             encodedVectorLabel.Size = new Size(0, 20);
             encodedVectorLabel.TabIndex = 17;
@@ -173,7 +191,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(378, 233);
+            label3.Location = new Point(364, 145);
             label3.Name = "label3";
             label3.Size = new Size(117, 20);
             label3.TabIndex = 18;
@@ -186,27 +204,157 @@
             sendVectorButton.Enabled = false;
             sendVectorButton.Font = new Font("Tahoma", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             sendVectorButton.ForeColor = SystemColors.ButtonHighlight;
-            sendVectorButton.Location = new Point(378, 166);
+            sendVectorButton.Location = new Point(364, 78);
             sendVectorButton.Name = "sendVectorButton";
             sendVectorButton.Size = new Size(174, 57);
             sendVectorButton.TabIndex = 19;
             sendVectorButton.Text = "Send vector through channel";
             sendVectorButton.UseVisualStyleBackColor = false;
-            sendVectorButton.Click += button1_Click;
+            sendVectorButton.Click += sendVectorButton_Click;
             // 
             // receivedVectorLabel
             // 
             receivedVectorLabel.AutoSize = true;
-            receivedVectorLabel.Location = new Point(501, 233);
+            receivedVectorLabel.Location = new Point(490, 145);
             receivedVectorLabel.Name = "receivedVectorLabel";
             receivedVectorLabel.Size = new Size(0, 20);
             receivedVectorLabel.TabIndex = 20;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(364, 165);
+            label4.Name = "label4";
+            label4.Size = new Size(126, 20);
+            label4.TabIndex = 21;
+            label4.Text = "Number of errors:";
+            label4.Click += label4_Click;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(364, 185);
+            label5.Name = "label5";
+            label5.Size = new Size(108, 20);
+            label5.TabIndex = 22;
+            label5.Text = "Error positions:";
+            // 
+            // numberOfErrorsLabel
+            // 
+            numberOfErrorsLabel.AutoSize = true;
+            numberOfErrorsLabel.Location = new Point(499, 165);
+            numberOfErrorsLabel.Name = "numberOfErrorsLabel";
+            numberOfErrorsLabel.Size = new Size(0, 20);
+            numberOfErrorsLabel.TabIndex = 23;
+            // 
+            // errorPositionsLabel
+            // 
+            errorPositionsLabel.AutoSize = true;
+            errorPositionsLabel.Location = new Point(481, 185);
+            errorPositionsLabel.Name = "errorPositionsLabel";
+            errorPositionsLabel.Size = new Size(0, 20);
+            errorPositionsLabel.TabIndex = 24;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Tahoma", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label6.Location = new Point(12, 318);
+            label6.Name = "label6";
+            label6.Size = new Size(222, 21);
+            label6.TabIndex = 25;
+            label6.Text = "2. Golay code - encoding";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Tahoma", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label7.Location = new Point(364, 55);
+            label7.Name = "label7";
+            label7.Size = new Size(369, 21);
+            label7.TabIndex = 26;
+            label7.Text = "3. Send vector through unreliable channel";
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Tahoma", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label8.Location = new Point(364, 220);
+            label8.Name = "label8";
+            label8.Size = new Size(268, 21);
+            label8.TabIndex = 27;
+            label8.Text = "4. Edit vector before decoding";
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Font = new Font("Tahoma", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label9.Location = new Point(12, 48);
+            label9.Name = "label9";
+            label9.Size = new Size(79, 21);
+            label9.TabIndex = 28;
+            label9.Text = "1. Input";
+            // 
+            // editVectorTextBox
+            // 
+            editVectorTextBox.Enabled = false;
+            editVectorTextBox.Location = new Point(364, 244);
+            editVectorTextBox.Name = "editVectorTextBox";
+            editVectorTextBox.PlaceholderText = "Max length 23";
+            editVectorTextBox.Size = new Size(217, 27);
+            editVectorTextBox.TabIndex = 29;
+            // 
+            // submitEditedVectorButton
+            // 
+            submitEditedVectorButton.BackColor = Color.YellowGreen;
+            submitEditedVectorButton.Enabled = false;
+            submitEditedVectorButton.Font = new Font("Tahoma", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            submitEditedVectorButton.ForeColor = SystemColors.ButtonHighlight;
+            submitEditedVectorButton.Location = new Point(364, 277);
+            submitEditedVectorButton.Name = "submitEditedVectorButton";
+            submitEditedVectorButton.Size = new Size(188, 29);
+            submitEditedVectorButton.TabIndex = 30;
+            submitEditedVectorButton.Text = "Submit and decode";
+            submitEditedVectorButton.UseVisualStyleBackColor = false;
+            submitEditedVectorButton.Click += submitEditedVectorButton_Click;
+            // 
+            // editVectorWarning
+            // 
+            editVectorWarning.AutoSize = true;
+            editVectorWarning.ForeColor = Color.Maroon;
+            editVectorWarning.Location = new Point(364, 309);
+            editVectorWarning.Name = "editVectorWarning";
+            editVectorWarning.Size = new Size(0, 20);
+            editVectorWarning.TabIndex = 31;
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Font = new Font("Tahoma", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label11.Location = new Point(364, 329);
+            label11.Name = "label11";
+            label11.Size = new Size(165, 21);
+            label11.TabIndex = 32;
+            label11.Text = "5. Decoded vector";
+            label11.Click += label11_Click;
             // 
             // Scenario1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(label11);
+            Controls.Add(editVectorWarning);
+            Controls.Add(submitEditedVectorButton);
+            Controls.Add(editVectorTextBox);
+            Controls.Add(label9);
+            Controls.Add(label8);
+            Controls.Add(label7);
+            Controls.Add(label6);
+            Controls.Add(errorPositionsLabel);
+            Controls.Add(numberOfErrorsLabel);
+            Controls.Add(label5);
+            Controls.Add(label4);
             Controls.Add(receivedVectorLabel);
             Controls.Add(sendVectorButton);
             Controls.Add(label3);
@@ -225,6 +373,7 @@
             Controls.Add(exitButton);
             Name = "Scenario1";
             Text = "Scenario1";
+            Load += Scenario1_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -234,7 +383,7 @@
         private Button exitButton;
         private Label firstScenarioLabel;
         private Label label1;
-        private TextBox textBox1;
+        private TextBox editVectorTextBox;
         private Button sendVectorButton;
         private Label label2;
         private TextBox vectorTextBox;
@@ -248,5 +397,16 @@
         private Label encodedVectorLabel;
         private Label label3;
         private Label receivedVectorLabel;
+        private Label label4;
+        private Label label5;
+        private Label numberOfErrorsLabel;
+        private Label errorPositionsLabel;
+        private Label label6;
+        private Label label7;
+        private Label label8;
+        private Label label9;
+        private Button submitEditedVectorButton;
+        private Label editVectorWarning;
+        private Label label11;
     }
 }

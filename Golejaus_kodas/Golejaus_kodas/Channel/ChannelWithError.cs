@@ -7,7 +7,7 @@ namespace Golejaus_kodas.Channel
 {
     public class ChannelWithError
     {
-        private Random randomNumberGenerator = GlobalRandomiser.RandomGenerator;
+        private Random randomNumberGenerator = GlobalRandomiser.RandomGenerator; //ar gerai cia? nes kol kas tik vienam vektoriui sukurtas kanalas
         private float errorProbability;
 
         public void setErrorProbability(float errorProbability)

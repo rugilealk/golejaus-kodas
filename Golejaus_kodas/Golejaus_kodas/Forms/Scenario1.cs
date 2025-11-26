@@ -48,6 +48,9 @@ namespace Golejaus_kodas.Forms
 
             errorProbability = float.Parse(probabilityTextBox.Text);
             channel.setErrorProbability(errorProbability);
+
+            vectorTextBox.Enabled = true;
+            submitVectorButton.Enabled = true;
         }
 
         private void submitVectorButton_Click(object sender, EventArgs e)
@@ -67,6 +70,8 @@ namespace Golejaus_kodas.Forms
 
             for (int i = 0; i < 12; ++i)
                 inputVector[i] = byte.Parse(vectorTextBox.Text[i].ToString());
+
+            encodeButton.Enabled = true;
         }
 
         private void encodedVectorLabel_Click(object sender, EventArgs e)
@@ -85,17 +90,71 @@ namespace Golejaus_kodas.Forms
             GolayEncoding encoder = new GolayEncoding();
             encodedVector = encoder.encodeVector(inputVector);
 
-            encodedVectorLabel.Text = VectorToString.convertVectorToString(encodedVector);
+            encodedVectorLabel.Text = VectorTools.convertVectorToString(encodedVector);
             sendVectorButton.Enabled = true;
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void sendVectorButton_Click(object sender, EventArgs e)
         {
             sendVectorButton.Enabled = false;
             receivedVector = channel.SendThroughChannel(encodedVector);
 
-            receivedVectorLabel.Text = VectorToString.convertVectorToString(receivedVector);
+            receivedVectorLabel.Text = VectorTools.convertVectorToString(receivedVector);
+            (int errorCount, List<int> errorPositions) = VectorTools.getErrorInfo(encodedVector, receivedVector);
+
+            numberOfErrorsLabel.Text = errorCount.ToString();
+            if (errorCount > 0)
+            {
+                errorPositionsLabel.Text = String.Join(", ", errorPositions); //FIXME: netelpa i eilute, jei error positions daugiau nei 17
+            }
+            else
+            {
+                errorPositionsLabel.Text = "No mistakes were made"; 
+            }
+
+            submitEditedVectorButton.Enabled = true;
+            editVectorTextBox.Enabled = true;
+            editVectorTextBox.Text = VectorTools.convertVectorToString(receivedVector);
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void firstScenarioLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void submitEditedVectorButton_Click(object sender, EventArgs e)
+        {
+            InputValidation validator = new InputValidation();
+            (bool, String) validationResult = validator.isEncodedVectorValid(editVectorTextBox.Text);
+
+            if (!validationResult.Item1)
+            {
+                editVectorWarning.Text = validationResult.Item2;
+                submitEditedVectorButton.Enabled = true;
+                return;
+            }
+
+            editVectorWarning.Text = "";
+            submitEditedVectorButton.Enabled = false;
+            receivedVector = editVectorTextBox.Text.Select(c => (byte)(c - '0')).ToArray();
+            editVectorTextBox.Enabled = false;
+
+
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Scenario1_Load(object sender, EventArgs e)
+        {
 
         }
     }
