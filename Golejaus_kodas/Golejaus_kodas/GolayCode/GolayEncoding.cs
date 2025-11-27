@@ -7,14 +7,16 @@ namespace Golejaus_kodas.GolayCode
 {
     internal class GolayEncoding
     {
-        public byte[,] matrixB = new Matrices().G;
-        public MatrixArithmetic matrixArithmetic = new MatrixArithmetic();
+        public byte[,] matrixB = Matrices.G;
         public byte[] encodeVector(byte[] inputVector)
         {
+            if(inputVector == null || inputVector.Length == 0)
+                throw new ArgumentException("Input vector cannot be null vector.");
+
             if (inputVector.Length != 12)
                 throw new ArgumentException("Input vector must be of length 12.");
 
-            return matrixArithmetic.multiplyVectorMatrix(inputVector, matrixB);
+            return MatrixArithmetic.multiplyVectorMatrix(inputVector, matrixB);
         }
     }
 }

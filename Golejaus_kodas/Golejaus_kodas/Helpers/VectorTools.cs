@@ -6,6 +6,18 @@ namespace Golejaus_kodas.Helpers
 {
     internal class VectorTools
     {
+        public static byte[] nullVector = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+
+        public static byte[] getUnitVector(int position, int length)
+        {
+            if (position < 1 || position > length)
+                throw new ArgumentOutOfRangeException(nameof(position), "Position must be between 1 and the length of the vector.");
+
+            byte[] unitVector = new byte[length];
+            unitVector[position] = 1;
+            return unitVector;
+        }
+
         public static string convertVectorToString(byte[] vector)
         {
             if (vector == null || vector.Length == 0)
@@ -32,7 +44,7 @@ namespace Golejaus_kodas.Helpers
             {
                 if (originalVector[i] != receivedVector[i])
                 {
-                    errorCount++;
+                    ++errorCount;
                     pos.Add(i + 1);
                 }
             }
@@ -40,15 +52,35 @@ namespace Golejaus_kodas.Helpers
             return (errorCount, pos);
         }
 
-        public int vectorWeight(byte[] vector)
+        public static int getWeight(byte[] vector)
         {
+            if (vector == null)
+                throw new ArgumentNullException(nameof(vector), "Cannot calculate weight of a null vector.");
+
             int weight = 0;
             foreach (byte b in vector)
             {
                 if (b == 1)
-                    weight++;
+                    ++weight;
             }
             return weight;
+        }
+
+        public static byte[] addTwoVectors(byte[] vectorA, byte[] vectorB)
+        {
+            if(vectorA == null || vectorB == null)
+                throw new ArgumentNullException("Vectors cannot be null.");
+
+            if(vectorA.Length != vectorB.Length)
+                throw new ArgumentException("Vectors must be of the same length.");
+
+            byte[] resultVector = new byte[vectorA.Length];
+
+            for(int i=0; i< vectorA.Length; ++i)
+                resultVector[i] = (byte)((vectorA[i] + vectorB[i]) % 2);
+
+            return resultVector;
+
         }
     }
 }

@@ -7,7 +7,7 @@ namespace Golejaus_kodas.GolayCode
     internal class Matrices
     {
         //the generating 12x23 matrix G and the control(parity-check) 24x12 matrix H for the Golay code
-        public byte[,] G =
+        public static byte[,] G =
         {
             {1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 0, 0, 0, 1, 0},
             {0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 0, 0, 0, 1, 0, 1},
@@ -23,7 +23,7 @@ namespace Golejaus_kodas.GolayCode
             {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1}
         };
 
-        public byte[,] H =
+        public static byte[,] H =
         {
             { 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
             { 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
@@ -52,7 +52,7 @@ namespace Golejaus_kodas.GolayCode
 
         };
 
-        public byte[,] B =
+        public static byte[,] B =
         {
             { 1, 1, 0, 1, 1, 1, 0, 0, 0, 1, 0, 1},
             { 1, 0, 1, 1, 1, 0, 0, 0, 1, 0, 1, 1},
