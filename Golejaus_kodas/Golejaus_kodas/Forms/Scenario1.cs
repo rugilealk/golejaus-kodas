@@ -101,26 +101,19 @@ namespace Golejaus_kodas.Forms
             receivedVector = channel.SendThroughChannel(encodedVector);
 
             receivedVectorLabel.Text = VectorTools.convertVectorToString(receivedVector);
-            (int errorCount, List<int> errorPositions) = VectorTools.getErrorInfo(encodedVector, receivedVector);
+            (int errorCount, string errorPositions) = VectorTools.getErrorInfoString(encodedVector, receivedVector);
 
             numberOfErrorsLabel.Text = errorCount.ToString();
             if (errorCount > 0)
-            {
-                errorPositionsLabel.Text = String.Join(", ", errorPositions); //FIXME: netelpa i eilute, jei error positions daugiau nei 17
-            }
+                errorPositionsLabel.Text = errorPositions;
+            
             else
-            {
-                errorPositionsLabel.Text = "No mistakes were made"; 
-            }
+                errorPositionsLabel.Text = "No mistakes were made";
+            
 
             submitEditedVectorButton.Enabled = true;
             editVectorTextBox.Enabled = true;
             editVectorTextBox.Text = VectorTools.convertVectorToString(receivedVector);
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void firstScenarioLabel_Click(object sender, EventArgs e)
@@ -145,6 +138,10 @@ namespace Golejaus_kodas.Forms
             receivedVector = editVectorTextBox.Text.Select(c => (byte)(c - '0')).ToArray();
             editVectorTextBox.Enabled = false;
 
+            GolayDecoding decoder = new GolayDecoding();
+            byte[] decodedVector = decoder.decode(receivedVector);
+            decodedVectorTextBox.Text = VectorTools.convertVectorToString(decodedVector);
+
 
         }
 
@@ -157,5 +154,13 @@ namespace Golejaus_kodas.Forms
         {
 
         }
+
+        private void decodedVectorTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
+
+//TODO: istrinti nenaudojamus usings
+//FIXME: nepriima kablelio, veikia tik su tasku skaiciai

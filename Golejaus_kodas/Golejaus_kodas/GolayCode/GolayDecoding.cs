@@ -101,7 +101,7 @@ namespace Golejaus_kodas.GolayCode
             for(int i=0; i< sindrome.Length; ++i)
                 errorVector[i] = sindrome[i];
 
-            for(int i=sindrome.Length; i< sindrome.Length + vector.Length; ++i)
+            for(int i=0; i< vector.Length; ++i)
                 errorVector[i + sindrome.Length] = vector[i];
             
             return errorVector;
@@ -116,7 +116,10 @@ namespace Golejaus_kodas.GolayCode
             bool rowNotFound = true;
             while(rowNotFound)
             {
-                row = MatrixArithmetic.getMatrixRow(i + 1, matrixB);
+                if (i == matrixB.GetLength(0))
+                    break;
+
+                row = MatrixArithmetic.getMatrixRow(i, matrixB);
                 byte[] additionResult = new byte[sindrome.Length];
                 additionResult = VectorTools.addTwoVectors(row, sindrome);
                 if (VectorTools.getWeight(additionResult) <= 2)

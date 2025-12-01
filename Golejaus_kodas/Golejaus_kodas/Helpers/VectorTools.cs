@@ -10,7 +10,7 @@ namespace Golejaus_kodas.Helpers
 
         public static byte[] getUnitVector(int position, int length)
         {
-            if (position < 1 || position > length)
+            if (position < 0 || position >= length)
                 throw new ArgumentOutOfRangeException(nameof(position), "Position must be between 1 and the length of the vector.");
 
             byte[] unitVector = new byte[length];
@@ -23,7 +23,7 @@ namespace Golejaus_kodas.Helpers
             if (vector == null || vector.Length == 0)
              return string.Empty;
 
-            char[] vectorCharArray = new char[23];
+            char[] vectorCharArray = new char[vector.Length];
             for (int i = 0; i < vector.Length; ++i)
             {
                 vectorCharArray[i] = (char)(vector[i] + '0');
@@ -32,10 +32,11 @@ namespace Golejaus_kodas.Helpers
             return new string(vectorCharArray);
         }
 
-        public static (int errorCount, List<int> errorPositions) getErrorInfo(byte[] originalVector, byte[] receivedVector)
+        private static (int errorCount, List<int> errorPositions) getErrorInfo(byte[] originalVector, byte[] receivedVector)
         {
             List<int> pos = new List<int>();
             int errorCount = 0;
+            int breakPoint = 10;
 
             if (originalVector == null || receivedVector == null || originalVector.Length != receivedVector.Length)
                 return (0, pos);
@@ -45,11 +46,37 @@ namespace Golejaus_kodas.Helpers
                 if (originalVector[i] != receivedVector[i])
                 {
                     ++errorCount;
+                    ++breakPoint;
+                    if (breakPoint > 9)
+                    {
+                        pos.Add(-1);
+                        breakPoint = 0;
+                    }
+                       
                     pos.Add(i + 1);
                 }
             }
 
             return (errorCount, pos);
+        }
+
+        public static (int errorCount, string errorPositionsString) getErrorInfoString(byte[] originalVector, byte[] receivedVector)
+        {
+            (int errorCount, List<int> errorPositions) = getErrorInfo(originalVector, receivedVector); 
+
+            if (errorPositions == null || errorPositions.Count == 0)
+                return (0, "No errors detected.");
+
+            StringBuilder positionsString = new StringBuilder();
+            foreach(int pos in errorPositions)
+            {
+                if (pos == -1)
+                    positionsString.Append("\n");
+                
+                else
+                    positionsString.Append(pos.ToString() + " ");
+            }
+            return (errorCount, positionsString.ToString().Trim());
         }
 
         public static int getWeight(byte[] vector)
