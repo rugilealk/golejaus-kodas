@@ -279,7 +279,7 @@
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Tahoma", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label8.Location = new Point(390, 198);
+            label8.Location = new Point(390, 233);
             label8.Name = "label8";
             label8.Size = new Size(268, 21);
             label8.TabIndex = 27;
@@ -288,7 +288,7 @@
             // label9
             // 
             label9.AutoSize = true;
-            label9.Font = new Font("Tahoma", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label9.Font = new Font("Tahoma", 10F, FontStyle.Bold);
             label9.Location = new Point(12, 48);
             label9.Name = "label9";
             label9.Size = new Size(79, 21);
@@ -298,7 +298,7 @@
             // editVectorTextBox
             // 
             editVectorTextBox.Enabled = false;
-            editVectorTextBox.Location = new Point(390, 222);
+            editVectorTextBox.Location = new Point(390, 257);
             editVectorTextBox.Name = "editVectorTextBox";
             editVectorTextBox.PlaceholderText = "Max length 23";
             editVectorTextBox.Size = new Size(217, 27);
@@ -310,7 +310,7 @@
             submitEditedVectorButton.Enabled = false;
             submitEditedVectorButton.Font = new Font("Tahoma", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             submitEditedVectorButton.ForeColor = SystemColors.ButtonHighlight;
-            submitEditedVectorButton.Location = new Point(390, 255);
+            submitEditedVectorButton.Location = new Point(390, 290);
             submitEditedVectorButton.Name = "submitEditedVectorButton";
             submitEditedVectorButton.Size = new Size(188, 29);
             submitEditedVectorButton.TabIndex = 30;
@@ -322,7 +322,7 @@
             // 
             editVectorWarning.AutoSize = true;
             editVectorWarning.ForeColor = Color.Maroon;
-            editVectorWarning.Location = new Point(390, 287);
+            editVectorWarning.Location = new Point(390, 322);
             editVectorWarning.Name = "editVectorWarning";
             editVectorWarning.Size = new Size(0, 20);
             editVectorWarning.TabIndex = 31;
@@ -331,7 +331,7 @@
             // 
             label11.AutoSize = true;
             label11.Font = new Font("Tahoma", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label11.Location = new Point(390, 318);
+            label11.Location = new Point(390, 353);
             label11.Name = "label11";
             label11.Size = new Size(165, 21);
             label11.TabIndex = 32;
@@ -341,9 +341,9 @@
             // decodedVectorTextBox
             // 
             decodedVectorTextBox.Enabled = false;
-            decodedVectorTextBox.Location = new Point(390, 342);
+            decodedVectorTextBox.Location = new Point(390, 377);
             decodedVectorTextBox.Name = "decodedVectorTextBox";
-            decodedVectorTextBox.Size = new Size(125, 27);
+            decodedVectorTextBox.Size = new Size(217, 27);
             decodedVectorTextBox.TabIndex = 33;
             decodedVectorTextBox.TextChanged += decodedVectorTextBox_TextChanged;
             // 

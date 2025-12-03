@@ -19,5 +19,10 @@ namespace Golejaus_kodas.Forms
         {
             Application.Exit();
         }
+
+        private void secondScenarioLabel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
