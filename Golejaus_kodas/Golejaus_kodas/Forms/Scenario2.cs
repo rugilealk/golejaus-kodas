@@ -1,14 +1,4 @@
-﻿using Golejaus_kodas.Channel;
-using Golejaus_kodas.Helpers;   
-using Golejaus_kodas.Validation;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
-using System.Threading.Channels;
-using System.Windows.Forms;
+﻿using Golejaus_kodas.Validation;
 using Golejaus_kodas.ScenarioCode;  
 
 namespace Golejaus_kodas.Forms
@@ -27,11 +17,6 @@ namespace Golejaus_kodas.Forms
             Application.Exit();
         }
 
-        private void secondScenarioLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void submitInputTextButton_Click(object sender, EventArgs e)
         {
             inputText = inputTextBox.Text;
@@ -40,22 +25,6 @@ namespace Golejaus_kodas.Forms
             submitErrorButton.Enabled = true;
             probabilityTextBox.Enabled = true;
         }
-
-        private void Scenario2_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void probabilityTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void submitErrorButton_Click(object sender, EventArgs e)
         {
             InputValidation validator = new InputValidation();

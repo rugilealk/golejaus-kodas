@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
-using System.Windows.Forms;
+﻿using System.Data;
 using Golejaus_kodas.Validation;
 using Golejaus_kodas.Channel;
 using Golejaus_kodas.GolayCode;
@@ -74,15 +68,6 @@ namespace Golejaus_kodas.Forms
             encodeButton.Enabled = true;
         }
 
-        private void encodedVectorLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void encodeButton_Click(object sender, EventArgs e)
         {
@@ -116,10 +101,6 @@ namespace Golejaus_kodas.Forms
             editVectorTextBox.Text = VectorTools.convertVectorToString(receivedVector);
         }
 
-        private void firstScenarioLabel_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void submitEditedVectorButton_Click(object sender, EventArgs e)
         {
@@ -145,20 +126,6 @@ namespace Golejaus_kodas.Forms
 
         }
 
-        private void label11_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Scenario1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void decodedVectorTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }
 

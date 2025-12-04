@@ -67,7 +67,6 @@
             secondScenarioLabel.Size = new Size(365, 30);
             secondScenarioLabel.TabIndex = 7;
             secondScenarioLabel.Text = "Second scenario - text input";
-            secondScenarioLabel.Click += secondScenarioLabel_Click;
             // 
             // label1
             // 
@@ -78,7 +77,6 @@
             label1.Size = new Size(79, 21);
             label1.TabIndex = 8;
             label1.Text = "1. Input";
-            label1.Click += label1_Click;
             // 
             // inputTextBox
             // 
@@ -163,7 +161,6 @@
             probabilityTextBox.PlaceholderText = "Enter number between 0 and 1";
             probabilityTextBox.Size = new Size(222, 27);
             probabilityTextBox.TabIndex = 17;
-            probabilityTextBox.TextChanged += probabilityTextBox_TextChanged;
             // 
             // label5
             // 
@@ -214,7 +211,6 @@
             Controls.Add(exitButton);
             Name = "Scenario2";
             Text = "Scenario2";
-            Load += Scenario2_Load;
             ResumeLayout(false);
             PerformLayout();
         }

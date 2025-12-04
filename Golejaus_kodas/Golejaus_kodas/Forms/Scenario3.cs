@@ -1,13 +1,4 @@
 ﻿using Golejaus_kodas.Validation;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.IO;
-using System.Text;
-using System.Transactions;
-using System.Windows.Forms;
 using Golejaus_kodas.ScenarioCode;
 
 namespace Golejaus_kodas.Forms
@@ -29,15 +20,10 @@ namespace Golejaus_kodas.Forms
             Application.Exit();
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             Stream bmpStream = null;
-
+            openFileButton.Enabled = false;
             using (OpenFileDialog dialog = new OpenFileDialog())
             {
                 dialog.Filter = "Bitmap files (*.bmp)|*.bmp|All files (*.*)|*.*";
@@ -81,21 +67,6 @@ namespace Golejaus_kodas.Forms
 
         }
 
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void secondScenarioLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void probabilityTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void submitErrorButton_Click(object sender, EventArgs e)
         {
             InputValidation validator = new InputValidation();
@@ -111,11 +82,8 @@ namespace Golejaus_kodas.Forms
             submitErrorButton.Enabled = false;
             errorProbability = float.Parse(probabilityTextBox.Text);
             openFileButton.Enabled = true;
+            probabilityTextBox.Enabled = false;
         }
 
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

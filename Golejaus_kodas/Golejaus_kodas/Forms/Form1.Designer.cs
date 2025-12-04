@@ -33,6 +33,7 @@
             choiceLabel = new Label();
             label1 = new Label();
             exitButton = new Button();
+            label2 = new Label();
             SuspendLayout();
             // 
             // choiceComboBox
@@ -44,7 +45,6 @@
             choiceComboBox.Size = new Size(166, 28);
             choiceComboBox.TabIndex = 0;
             choiceComboBox.Text = "Choose one...";
-            choiceComboBox.SelectedIndexChanged += choiceComboBox_SelectedIndexChanged;
             // 
             // submitScenarioButton
             // 
@@ -70,7 +70,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 14F);
-            label1.Location = new Point(323, 122);
+            label1.Location = new Point(326, 148);
             label1.Name = "label1";
             label1.Size = new Size(113, 32);
             label1.TabIndex = 3;
@@ -89,18 +89,27 @@
             exitButton.UseVisualStyleBackColor = false;
             exitButton.Click += exitButton_Click;
             // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(-209, 110);
+            label2.Name = "label2";
+            label2.Size = new Size(0, 20);
+            label2.TabIndex = 5;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(label2);
             Controls.Add(exitButton);
             Controls.Add(label1);
             Controls.Add(choiceLabel);
             Controls.Add(submitScenarioButton);
             Controls.Add(choiceComboBox);
             Name = "Form1";
-            Text = "Form1";
+            Text = "Golay code program";
             ResumeLayout(false);
             PerformLayout();
         }
@@ -112,5 +121,6 @@
         private Label choiceLabel;
         private Label label1;
         private Button exitButton;
+        private Label label2;
     }
 }

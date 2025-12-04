@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Golejaus_kodas.Helpers
+﻿namespace Golejaus_kodas.Helpers
 {
     internal class MatrixArithmetic
     {

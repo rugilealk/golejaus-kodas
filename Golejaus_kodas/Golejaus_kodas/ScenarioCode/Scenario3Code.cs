@@ -1,9 +1,6 @@
 ﻿using Golejaus_kodas.Channel;
 using Golejaus_kodas.GolayCode;
 using Golejaus_kodas.Helpers;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Golejaus_kodas.ScenarioCode
 {

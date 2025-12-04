@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Golejaus_kodas.Helpers;
+﻿using Golejaus_kodas.Helpers;
 
 namespace Golejaus_kodas.GolayCode
 {

@@ -1,10 +1,4 @@
 ﻿using Golejaus_kodas.Helpers;
-using System;
-using System.Collections.Generic;
-using System.Numerics;
-using System.Security.Cryptography;
-using System.Text;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
 
 namespace Golejaus_kodas.GolayCode
@@ -110,6 +104,9 @@ namespace Golejaus_kodas.GolayCode
         // function, that finds line of matrix B which added to sindrome results in vector with weight less than 2
         private (byte[], int) findMatrixBRow(byte[] sindrome)
         {
+            if(sindrome == null)
+                throw new ArgumentException("Sindrome cannot be null.");
+
             int rowNumber = 0;
             byte[] row = new byte[sindrome.Length];
             int i = 0;

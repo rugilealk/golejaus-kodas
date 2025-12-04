@@ -7,11 +7,6 @@ namespace Golejaus_kodas
             InitializeComponent();
         }
 
-        private void choiceComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void submitScenarioButton_Click(object sender, EventArgs e)
         {
             var selectedScenario = choiceComboBox.SelectedItem;
@@ -36,8 +31,6 @@ namespace Golejaus_kodas
                     MessageBox.Show("Please select a valid scenario.");
                     break;
             }
-
-
         }
 
         private void exitButton_Click(object sender, EventArgs e)

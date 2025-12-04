@@ -81,7 +81,6 @@
             firstScenarioLabel.Size = new Size(359, 30);
             firstScenarioLabel.TabIndex = 6;
             firstScenarioLabel.Text = "First scenario - vector input";
-            firstScenarioLabel.Click += firstScenarioLabel_Click;
             // 
             // label1
             // 
@@ -179,7 +178,6 @@
             label10.Size = new Size(119, 20);
             label10.TabIndex = 16;
             label10.Text = "Encoded vector: ";
-            label10.Click += encodedVectorLabel_Click;
             // 
             // encodedVectorLabel
             // 
@@ -197,7 +195,6 @@
             label3.Size = new Size(117, 20);
             label3.TabIndex = 18;
             label3.Text = "Received vector:";
-            label3.Click += label3_Click;
             // 
             // sendVectorButton
             // 
@@ -336,7 +333,6 @@
             label11.Size = new Size(165, 21);
             label11.TabIndex = 32;
             label11.Text = "5. Decoded vector";
-            label11.Click += label11_Click;
             // 
             // decodedVectorTextBox
             // 
@@ -345,7 +341,6 @@
             decodedVectorTextBox.Name = "decodedVectorTextBox";
             decodedVectorTextBox.Size = new Size(217, 27);
             decodedVectorTextBox.TabIndex = 33;
-            decodedVectorTextBox.TextChanged += decodedVectorTextBox_TextChanged;
             // 
             // Scenario1
             // 
@@ -383,7 +378,6 @@
             Controls.Add(exitButton);
             Name = "Scenario1";
             Text = "Scenario1";
-            Load += Scenario1_Load;
             ResumeLayout(false);
             PerformLayout();
         }
