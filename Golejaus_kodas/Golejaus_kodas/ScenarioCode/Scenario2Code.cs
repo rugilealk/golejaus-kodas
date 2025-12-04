@@ -11,7 +11,7 @@ namespace Golejaus_kodas.ScenarioCode
     {
         public static (string withCode, string withoutCode) Scenario2(string inputText, float errorProbability)
         {
-            var (messageVectors, paddingCount) = ConvertingTools.stringToByteArrayList(inputText);
+            var (messageVectors, paddingCount) = ConvertingTools.stringToGolayByteArray(inputText);
 
             GolayEncoding encoder = new GolayEncoding();
             GolayDecoding decoder = new GolayDecoding();
@@ -29,7 +29,7 @@ namespace Golejaus_kodas.ScenarioCode
                 receivedWithoutCode.Add(received);
             }
 
-            string textWithoutCode = ConvertingTools.byteArrayListToString(receivedWithoutCode, paddingCount);
+            string textWithoutCode = ConvertingTools.golayByteArrayToString(receivedWithoutCode, paddingCount);
 
             List<byte[]> decodedVectors = new List<byte[]>();
             foreach (var message in messageVectors)
@@ -39,7 +39,7 @@ namespace Golejaus_kodas.ScenarioCode
                 byte[] decoded = decoder.decode(received);
                 decodedVectors.Add(decoded);
             }
-            string textWithCode = ConvertingTools.byteArrayListToString(decodedVectors, paddingCount);
+            string textWithCode = ConvertingTools.golayByteArrayToString(decodedVectors, paddingCount);
 
             return (textWithCode, textWithoutCode);
         }
