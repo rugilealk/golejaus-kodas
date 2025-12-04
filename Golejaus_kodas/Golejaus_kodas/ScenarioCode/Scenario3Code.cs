@@ -6,6 +6,16 @@ namespace Golejaus_kodas.ScenarioCode
 {
     internal class Scenario3Code
     {
+        /// <summary>
+        /// Simuliuoja BMP formato paveikslėlio perdavima per klaidinga kanalą su ir be Golėjaus kodo.
+        /// </summary>
+        /// <param name="fileBytes"> Viso paveikslėlio informacija (baitais)</param>
+        /// <param name="errorProbability"> Klaidos tikimybė</param>
+        /// <returns>
+        /// Kortežą su:
+        /// - Paveikslėlio baitais, perduotais per klaidingą kanalą su Golėjaus kodu
+        /// - Paveikslėlio baitais, perduotais per klaidingą kanalą be Golėjaus kodo
+        /// </returns>
         public static (byte[] withCodeBytes, byte[] withoutCodeBytes) Scenario3(byte[] fileBytes, float errorProbability)
         {
             int pixelOffset = BitConverter.ToInt32(fileBytes, 10);
@@ -27,6 +37,7 @@ namespace Golejaus_kodas.ScenarioCode
             ChannelWithError channelWithCode = new ChannelWithError();
             channelWithCode.setErrorProbability(errorProbability);
 
+            // Paveikslėlio be Golėjaus kodu perdavimas per klaidingą kanalą
             List<byte[]> receivedWithoutCode = new List<byte[]>();
             foreach (var message in messageVectors)
             {
@@ -34,13 +45,14 @@ namespace Golejaus_kodas.ScenarioCode
                 receivedWithoutCode.Add(received);
             }
 
+            // Konvertavimas atgal i BMP formato paveikslėlį iš gautų vektorių (be kodavimo)
             List<byte> withoutCodeList = ConvertingTools.golayByteArrayToInfoBitArray(receivedWithoutCode, paddingCount);
             byte[] withoutCodeBytes = withoutCodeList.ToArray();
             byte[] withoutCodeBmpBytes = new byte[headerBytes.Length + withoutCodeBytes.Length];
             Array.Copy(headerBytes, 0, withoutCodeBmpBytes, 0, headerBytes.Length);
             Array.Copy(withoutCodeBytes, 0, withoutCodeBmpBytes, headerBytes.Length, withoutCodeBytes.Length);
 
-
+            // Paveikslėlio su Golėjaus kodu perdavimas per klaidingą kanalą
             List<byte[]> decodedVectors = new List<byte[]>();
             foreach (var message in messageVectors)
             {
@@ -49,6 +61,8 @@ namespace Golejaus_kodas.ScenarioCode
                 byte[] decoded = decoder.decode(received);
                 decodedVectors.Add(decoded);
             }
+
+            // Konvertavimas atgal i BMP formato paveikslėlį iš gautų vektorių (su kodavimu)
             List<byte> withCodeList = ConvertingTools.golayByteArrayToInfoBitArray(decodedVectors, paddingCount);
             byte[] withCodeBytes = withCodeList.ToArray();
             byte[] withCodeBmpBytes = new byte[headerBytes.Length + withCodeBytes.Length];

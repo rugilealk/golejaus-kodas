@@ -1,8 +1,13 @@
 ﻿namespace Golejaus_kodas.GolayCode
 {
+    /// <summary>
+    /// Golėjaus kodo matricos, reikalingos kodavimui ir dekodavimui
+    /// </summary>
     internal class Matrices
     {
-        //the generating 12x23 matrix G and the control(parity-check) 24x12 matrix H for the Golay code
+        /// <summary>
+        /// Generuojanti matrica G (12×23).
+        /// </summary>
         public static byte[,] G =
         {
             {1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 0, 0, 0, 1, 0},
@@ -19,6 +24,9 @@
             {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1}
         };
 
+        /// <summary>
+        /// Kontrolinė matrica H (24×12).
+        /// </summary>
         public static byte[,] H =
         {
             { 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
@@ -48,6 +56,9 @@
 
         };
 
+        /// <summary>
+        /// Matrica B (12×12).
+        /// </summary>
         public static byte[,] B =
         {
             { 1, 1, 0, 1, 1, 1, 0, 0, 0, 1, 0, 1},

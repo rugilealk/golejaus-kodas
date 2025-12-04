@@ -4,8 +4,18 @@ namespace Golejaus_kodas.Helpers
 {
     internal class VectorTools
     {
+        /// <summary>
+        /// Nulinis 12 bitų vektorius.
+        /// </summary>
         public static byte[] nullVector = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
 
+        /// <summary>
+        /// Sukuria vectorių, užpildytą nuliais išskyrus nurodytą poziciją.
+        /// Naudojamas Golėjaus dekodavimo algoritme konstruojant klaidų vektorius.
+        /// </summary>
+        /// <param name="position">Pozicija, kurioje bus vienetas (pradedant nuo 0).</param>
+        /// <param name="length">Vektoriaus ilgis.</param>
+        /// <returns>Vienetinis vektorius su 1 nurodytoje pozicijoje.</returns
         public static byte[] getUnitVector(int position, int length)
         {
             if (position < 0 || position >= length)
@@ -15,7 +25,11 @@ namespace Golejaus_kodas.Helpers
             unitVector[position] = 1;
             return unitVector;
         }
-
+        /// <summary>
+        /// Konvertuoja vektorių į tekstinę eilutę.
+        /// </summary>
+        /// <param name="vector">Vektorius, kurį reikia konvertuoti.</param>
+        /// <returns>Tekstinė vektoriaus reprezentacija.</returns>
         public static string convertVectorToString(byte[] vector)
         {
             if (vector == null || vector.Length == 0)
@@ -30,6 +44,16 @@ namespace Golejaus_kodas.Helpers
             return new string(vectorCharArray);
         }
 
+        /// <summary>
+        /// Palygina du vektorius(pradinį ir gautą iš kanalo) ir randa klaidų pozicijas bei jų skaičių.
+        /// </summary>
+        /// <param name="originalVector">Pradinis vektorius.</param>
+        /// <param name="receivedVector">Gautas vektorius iš kanalo.</param>
+        /// <returns>
+        /// Kortežą su:
+        /// - bendru klaidų skaičiumi
+        /// - klaidų pozicijų sąrašą (su -1 kaip naujos eilutės simbolį kas 10 klaidų)
+        /// </returns>
         public static (int errorCount, List<int> errorPositions) getErrorInfo(byte[] originalVector, byte[] receivedVector)
         {
             List<int> pos = new List<int>();
@@ -57,7 +81,16 @@ namespace Golejaus_kodas.Helpers
 
             return (errorCount, pos);
         }
-
+        /// <summary>
+        /// Grąžina dviejų vektorių lyginimo informaciją su naujos eilutės simboliais patogesniam spausdinimui.
+        /// </summary>
+        /// <param name="originalVector">Pradinis vektorius.</param>
+        /// <param name="receivedVector">Gautas vektorius po siuntimo kanalu.</param>
+        /// <returns>
+        /// Kortežą su:
+        /// - klaidų skaičiumi
+        /// - klaidų pozicijomis kaip tekstą.
+        /// </returns>
         public static (int errorCount, string errorPositionsString) getErrorInfoString(byte[] originalVector, byte[] receivedVector)
         {
             (int errorCount, List<int> errorPositions) = getErrorInfo(originalVector, receivedVector); 
@@ -77,6 +110,11 @@ namespace Golejaus_kodas.Helpers
             return (errorCount, positionsString.ToString().Trim());
         }
 
+        /// <summary>
+        /// Apskaičiuoja vektoriaus svorį (vienetų skaičių).
+        /// </summary>
+        /// <param name="vector">Vektorius, kurio svoris skaičiuojamas.</param>
+        /// <returns>Vektoriaus svorį.</returns>
         public static int getWeight(byte[] vector)
         {
             if (vector == null)
@@ -90,7 +128,12 @@ namespace Golejaus_kodas.Helpers
             }
             return weight;
         }
-
+        /// <summary>
+        /// Sudeda du vektorius.
+        /// </summary>
+        /// <param name="vectorA">Pirmasis vektorius.</param>
+        /// <param name="vectorB">Antrasis vektorius.</param>
+        /// <returns>Rezultato vektorius.</returns>
         public static byte[] addTwoVectors(byte[] vectorA, byte[] vectorB)
         {
             if(vectorA == null || vectorB == null)

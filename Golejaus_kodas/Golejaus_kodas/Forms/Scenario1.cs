@@ -1,8 +1,9 @@
-﻿using System.Data;
-using Golejaus_kodas.Validation;
-using Golejaus_kodas.Channel;
+﻿using Golejaus_kodas.Channel;
 using Golejaus_kodas.GolayCode;
 using Golejaus_kodas.Helpers;
+using Golejaus_kodas.Validation;
+using System.Data;
+using System.Globalization;
 
 namespace Golejaus_kodas.Forms
 {
@@ -20,15 +21,24 @@ namespace Golejaus_kodas.Forms
             channel = new ChannelWithError();
         }
 
+        /// <summary>
+        /// Funkcija, kviečiama paspaudus mygtuką "Išeiti",
+        /// kuri uždaro programą.
+        /// </summary>
         private void exitButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        private void submitErrorButton_Click(object sender, EventArgs e) //pataisyti, kad priimtu skaicius su kableliu
+        /// <summary>
+        /// Funkcija, kuri yra kviečiama paspaudus mygtuką "Submit" prie klaidos tikimybės įvedimo laukelio.
+        /// </summary>
+        private void submitErrorButton_Click(object sender, EventArgs e) 
         {
+            // Validacija - tikimybė turi būti skaičius nuo 0 iki 1
             InputValidation validator = new InputValidation();
-            (bool, String) validationResult = validator.isProbabilityValid(probabilityTextBox.Text);
+            string inputWithDot = probabilityTextBox.Text.Replace(',', '.'); 
+            (bool, String) validationResult = validator.isProbabilityValid(inputWithDot);
             if (!validationResult.Item1)
             {
                 probabilityErrorWarning.Text = validationResult.Item2;
@@ -40,15 +50,20 @@ namespace Golejaus_kodas.Forms
             submitErrorButton.Enabled = false;
             probabilityTextBox.Enabled = false;
 
-            errorProbability = float.Parse(probabilityTextBox.Text);
+            errorProbability = float.Parse(inputWithDot, CultureInfo.InvariantCulture);
             channel.setErrorProbability(errorProbability);
 
             vectorTextBox.Enabled = true;
             submitVectorButton.Enabled = true;
         }
 
+        /// <summary>
+        /// Funkcija, kuri yra kviečiama paspaudus mygtuką "Submit" prie vektoriaus įvedimo laukelio.
+        /// kuri įrašo įvestą vektorių.
+        /// </summary>
         private void submitVectorButton_Click(object sender, EventArgs e)
         {
+            // Vektoriaus validacija - vektorius turi būti 12 ilgio ir sudarytas tik iš 0 ir 1 reikšmių
             InputValidation validator = new InputValidation();
             (bool, String) validationResult = validator.isVectorValid(vectorTextBox.Text);
             if (!validationResult.Item1)
@@ -62,6 +77,7 @@ namespace Golejaus_kodas.Forms
             submitVectorButton.Enabled = false;
             vectorTextBox.Enabled = false;
 
+            // Nuskaito įvestą vektorių
             for (int i = 0; i < 12; ++i)
                 inputVector[i] = byte.Parse(vectorTextBox.Text[i].ToString());
 
@@ -69,6 +85,9 @@ namespace Golejaus_kodas.Forms
         }
 
 
+        /// <summary>
+        /// Funkcija, kuri yra kviečiama paspaudus mygtuką "Encode", kuri užkoduoja įvestą vektorių naudojant Golėjaus kodą.
+        /// </summary>
         private void encodeButton_Click(object sender, EventArgs e)
         {
             encodeButton.Enabled = false;
@@ -80,6 +99,9 @@ namespace Golejaus_kodas.Forms
 
         }
 
+        /// <summary>
+        /// Funkcija, kuri yra kviečiama paspaudus mygtuką "Send through channel", kuri siunčia užkoduotą vektorių per kanalą su klaidomis.
+        /// </summary>
         private void sendVectorButton_Click(object sender, EventArgs e)
         {
             sendVectorButton.Enabled = false;
@@ -88,6 +110,7 @@ namespace Golejaus_kodas.Forms
             receivedVectorLabel.Text = VectorTools.convertVectorToString(receivedVector);
             (int errorCount, string errorPositions) = VectorTools.getErrorInfoString(encodedVector, receivedVector);
 
+            // Atvaizduoja klaidų informaciją
             numberOfErrorsLabel.Text = errorCount.ToString();
             if (errorCount > 0)
                 errorPositionsLabel.Text = errorPositions;
@@ -102,8 +125,12 @@ namespace Golejaus_kodas.Forms
         }
 
 
+        /// <summary>
+        /// Funkcija, kuri yra kviečiama paspaudus mygtuką "Submit" prie redaguoto vektoriaus įvedimo laukelio.
+        /// </summary>
         private void submitEditedVectorButton_Click(object sender, EventArgs e)
         {
+            // Vektoriaus validacija - vektorius turi būti 23 ilgio ir sudarytas tik iš 0 ir 1 reikšmių
             InputValidation validator = new InputValidation();
             (bool, String) validationResult = validator.isEncodedVectorValid(editVectorTextBox.Text);
 
@@ -116,18 +143,17 @@ namespace Golejaus_kodas.Forms
 
             editVectorWarning.Text = "";
             submitEditedVectorButton.Enabled = false;
-            receivedVector = editVectorTextBox.Text.Select(c => (byte)(c - '0')).ToArray();
+            // Nuskaito redaguotą vektorių
+            for (int i = 0; i < 12; ++i)
+                receivedVector[i] = byte.Parse(editVectorTextBox.Text[i].ToString());
+
             editVectorTextBox.Enabled = false;
 
+            // Dekoduoja gautą (ir galbūt redaguotą) vektorių
             GolayDecoding decoder = new GolayDecoding();
             byte[] decodedVector = decoder.decode(receivedVector);
             decodedVectorTextBox.Text = VectorTools.convertVectorToString(decodedVector);
-
-
         }
 
     }
 }
-
-//TODO: istrinti nenaudojamus usings
-//FIXME: nepriima kablelio, veikia tik su tasku skaiciai

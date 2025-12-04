@@ -1,7 +1,19 @@
 ﻿namespace Golejaus_kodas.Helpers
 {
+    /// <summary>
+    /// Pagalbinė klasė veiksmams su matricomis atlikti.
+    /// Visos operacijos atliekamos moduliu 2.
+    /// </summary>
     internal class MatrixArithmetic
     {
+        /// <summary>
+        /// Sudaugina vektorių su matrica.
+        /// </summary>
+        /// <param name="vector">Vektorius (ilgis turi sutapti su matricos eilučių skaičiumi).</param>
+        /// <param name="matrix">Matrica, su kuria dauginama.</param>
+        /// <returns>
+        /// Rezultato vektorius, kurio ilgis lygus matricos stulpelių skaičiui.
+        /// </returns>
         public static byte[] multiplyVectorMatrix(byte[] vector, byte[,] matrix)
         {
             if(vector == null)
@@ -24,6 +36,12 @@
             return product;
         }
 
+        /// <summary>
+        /// Grąžina nurodytą matricos eilutę.
+        /// </summary>
+        /// <param name="number">Eilutės numeris (prasideda nuo 0).</param>
+        /// <param name="matrix">Matrica, iš kurios imama eilutė.</param>
+        /// <returns>Nurodyta matricos eilutė kaip vektorius.</returns>
         public static byte[] getMatrixRow(int number, byte[,] matrix)
         {
             if (number < 0 || number >= matrix.GetLength(0))

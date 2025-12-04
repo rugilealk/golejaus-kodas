@@ -2,11 +2,22 @@
 using System.Collections.Generic;
 namespace Golejaus_kodas.Channel
 {
+    /// <summary>
+    /// Dvejetainis simetrinis kanalas su klaidos tikimybe, nurodyta vartotojo.
+    /// Kiekvienas siunčiamas bitas gali būti iškraipomas su nustatyta tikimybe,
+    /// nepriklausomai nuo kitų bitų.
+    /// </summary>
     public class ChannelWithError
     {
         private Random randomNumberGenerator = GlobalRandomiser.RandomGenerator; //ar gerai cia? nes kol kas tik vienam vektoriui sukurtas kanalas
         private float errorProbability;
 
+        /// <summary>
+        /// Nustato kanalo klaidos tikimybę.
+        /// </summary>
+        /// <param name="errorProbability">
+        /// Klaidos tikimybė, kurios reikšmė yra intervale [0, 1].
+        /// </param>
         public void setErrorProbability(float errorProbability)
         {
             if (errorProbability < 0 || errorProbability > 1)
@@ -16,6 +27,16 @@ namespace Golejaus_kodas.Channel
             this.errorProbability = errorProbability;
         }
 
+
+        /// <summary>
+        /// Siunčia duomenis per kanalą su klaidomis.
+        /// </summary>
+        /// <param name="data">
+        /// Siunčiamas duomenų masyvas, kur kiekvienas elementas yra 0 arba 1.
+        /// </param>
+        /// <returns>
+        /// Gautas duomenų masyvas po siuntimo per kanalą, su galimomis klaidomis.
+        /// </returns>
         public byte[] SendThroughChannel(byte[] data)
         {
             byte[] result = new byte[data.Length];
