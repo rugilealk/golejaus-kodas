@@ -3,7 +3,7 @@
   "WorkspaceRootPath": "C:\\Users\\rugil\\Desktop\\Kodavimo teorija\\Golejaus_kodas\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C6B55551-BDC9-361B-30C5-AB8896D9E74A}|Golejaus_kodas\\Golejaus_kodas.csproj|C:\\Users\\rugil\\Desktop\\Kodavimo teorija\\Golejaus_kodas\\golejaus_kodas\\forms\\scenario3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{C6B55551-BDC9-361B-30C5-AB8896D9E74A}|Golejaus_kodas\\Golejaus_kodas.csproj|c:\\users\\rugil\\desktop\\kodavimo teorija\\golejaus_kodas\\golejaus_kodas\\forms\\scenario3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{C6B55551-BDC9-361B-30C5-AB8896D9E74A}|Golejaus_kodas\\Golejaus_kodas.csproj|solutionrelative:golejaus_kodas\\forms\\scenario3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -47,7 +47,7 @@
       "RelativeMoniker": "D:0:0:{C6B55551-BDC9-361B-30C5-AB8896D9E74A}|Golejaus_kodas\\Golejaus_kodas.csproj|solutionrelative:golejaus_kodas\\golaycode\\golaydecoding.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C6B55551-BDC9-361B-30C5-AB8896D9E74A}|Golejaus_kodas\\Golejaus_kodas.csproj|c:\\users\\rugil\\desktop\\kodavimo teorija\\golejaus_kodas\\golejaus_kodas\\forms\\scenario1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{C6B55551-BDC9-361B-30C5-AB8896D9E74A}|Golejaus_kodas\\Golejaus_kodas.csproj|C:\\Users\\rugil\\Desktop\\Kodavimo teorija\\Golejaus_kodas\\golejaus_kodas\\forms\\scenario1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{C6B55551-BDC9-361B-30C5-AB8896D9E74A}|Golejaus_kodas\\Golejaus_kodas.csproj|solutionrelative:golejaus_kodas\\forms\\scenario1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -110,7 +110,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
@@ -128,41 +128,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Form1.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\rugil\\Desktop\\Kodavimo teorija\\Golejaus_kodas\\Golejaus_kodas\\Forms\\Form1.Designer.cs",
-              "RelativeDocumentMoniker": "Golejaus_kodas\\Forms\\Form1.Designer.cs",
-              "ToolTip": "C:\\Users\\rugil\\Desktop\\Kodavimo teorija\\Golejaus_kodas\\Golejaus_kodas\\Forms\\Form1.Designer.cs*",
-              "RelativeToolTip": "Golejaus_kodas\\Forms\\Form1.Designer.cs*",
-              "ViewState": "AgIAABoAAAAAAAAAAAAMwC4AAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-04T18:55:00.57Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\rugil\\Desktop\\Kodavimo teorija\\Golejaus_kodas\\Golejaus_kodas\\Forms\\Form1.cs",
-              "RelativeDocumentMoniker": "Golejaus_kodas\\Forms\\Form1.cs",
-              "ToolTip": "C:\\Users\\rugil\\Desktop\\Kodavimo teorija\\Golejaus_kodas\\Golejaus_kodas\\Forms\\Form1.cs [Design]*",
-              "RelativeToolTip": "Golejaus_kodas\\Forms\\Form1.cs [Design]*",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-24T19:43:43.93Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 4,
               "Title": "Form1.cs",
               "DocumentMoniker": "C:\\Users\\rugil\\Desktop\\Kodavimo teorija\\Golejaus_kodas\\Golejaus_kodas\\Forms\\Form1.cs",
               "RelativeDocumentMoniker": "Golejaus_kodas\\Forms\\Form1.cs",
-              "ToolTip": "C:\\Users\\rugil\\Desktop\\Kodavimo teorija\\Golejaus_kodas\\Golejaus_kodas\\Forms\\Form1.cs*",
-              "RelativeToolTip": "Golejaus_kodas\\Forms\\Form1.cs*",
+              "ToolTip": "C:\\Users\\rugil\\Desktop\\Kodavimo teorija\\Golejaus_kodas\\Golejaus_kodas\\Forms\\Form1.cs",
+              "RelativeToolTip": "Golejaus_kodas\\Forms\\Form1.cs",
               "ViewState": "AgIAAAcAAAAAAAAAAAAQwCAAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-24T19:54:02.338Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-24T19:54:02.338Z"
             },
             {
               "$type": "Document",
@@ -170,8 +144,8 @@
               "Title": "Scenario3.cs [Design]",
               "DocumentMoniker": "C:\\Users\\rugil\\Desktop\\Kodavimo teorija\\Golejaus_kodas\\Golejaus_kodas\\Forms\\Scenario3.cs",
               "RelativeDocumentMoniker": "Golejaus_kodas\\Forms\\Scenario3.cs",
-              "ToolTip": "C:\\Users\\rugil\\Desktop\\Kodavimo teorija\\Golejaus_kodas\\Golejaus_kodas\\Forms\\Scenario3.cs [Design]*",
-              "RelativeToolTip": "Golejaus_kodas\\Forms\\Scenario3.cs [Design]*",
+              "ToolTip": "C:\\Users\\rugil\\Desktop\\Kodavimo teorija\\Golejaus_kodas\\Golejaus_kodas\\Forms\\Scenario3.cs [Design]",
+              "RelativeToolTip": "Golejaus_kodas\\Forms\\Scenario3.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-24T20:56:16.884Z",
               "EditorCaption": " [Design]"
@@ -182,12 +156,11 @@
               "Title": "Scenario3.cs",
               "DocumentMoniker": "C:\\Users\\rugil\\Desktop\\Kodavimo teorija\\Golejaus_kodas\\Golejaus_kodas\\Forms\\Scenario3.cs",
               "RelativeDocumentMoniker": "Golejaus_kodas\\Forms\\Scenario3.cs",
-              "ToolTip": "C:\\Users\\rugil\\Desktop\\Kodavimo teorija\\Golejaus_kodas\\Golejaus_kodas\\Forms\\Scenario3.cs*",
-              "RelativeToolTip": "Golejaus_kodas\\Forms\\Scenario3.cs*",
+              "ToolTip": "C:\\Users\\rugil\\Desktop\\Kodavimo teorija\\Golejaus_kodas\\Golejaus_kodas\\Forms\\Scenario3.cs",
+              "RelativeToolTip": "Golejaus_kodas\\Forms\\Scenario3.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAF8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-25T15:09:47.984Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-25T15:09:47.984Z"
             },
             {
               "$type": "Document",
@@ -195,12 +168,11 @@
               "Title": "Scenario3.Designer.cs",
               "DocumentMoniker": "C:\\Users\\rugil\\Desktop\\Kodavimo teorija\\Golejaus_kodas\\Golejaus_kodas\\Forms\\Scenario3.Designer.cs",
               "RelativeDocumentMoniker": "Golejaus_kodas\\Forms\\Scenario3.Designer.cs",
-              "ToolTip": "C:\\Users\\rugil\\Desktop\\Kodavimo teorija\\Golejaus_kodas\\Golejaus_kodas\\Forms\\Scenario3.Designer.cs*",
-              "RelativeToolTip": "Golejaus_kodas\\Forms\\Scenario3.Designer.cs*",
+              "ToolTip": "C:\\Users\\rugil\\Desktop\\Kodavimo teorija\\Golejaus_kodas\\Golejaus_kodas\\Forms\\Scenario3.Designer.cs",
+              "RelativeToolTip": "Golejaus_kodas\\Forms\\Scenario3.Designer.cs",
               "ViewState": "AgIAAL4AAAAAAAAAAAAMwNEAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-04T17:46:10.121Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-04T17:46:10.121Z"
             },
             {
               "$type": "Document",
@@ -212,8 +184,23 @@
               "RelativeToolTip": "Golejaus_kodas\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-24T21:21:05.384Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-24T21:21:05.384Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{56df62a4-05a3-4e5b-aa1a-99371ccfb997}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Form1.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\rugil\\Desktop\\Kodavimo teorija\\Golejaus_kodas\\Golejaus_kodas\\Forms\\Form1.Designer.cs",
+              "RelativeDocumentMoniker": "Golejaus_kodas\\Forms\\Form1.Designer.cs",
+              "ToolTip": "C:\\Users\\rugil\\Desktop\\Kodavimo teorija\\Golejaus_kodas\\Golejaus_kodas\\Forms\\Form1.Designer.cs",
+              "RelativeToolTip": "Golejaus_kodas\\Forms\\Form1.Designer.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAMwC4AAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-04T18:55:00.57Z"
             },
             {
               "$type": "Document",
@@ -225,8 +212,7 @@
               "RelativeToolTip": "Golejaus_kodas\\Helpers\\ConvertingTools.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-03T20:28:24.127Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-03T20:28:24.127Z"
             },
             {
               "$type": "Document",
@@ -238,8 +224,7 @@
               "RelativeToolTip": "Golejaus_kodas\\GolayCode\\Matrices.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAEEAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-25T20:28:39.894Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-25T20:28:39.894Z"
             },
             {
               "$type": "Document",
@@ -251,8 +236,7 @@
               "RelativeToolTip": "Golejaus_kodas\\GolayCode\\GolayEncoding.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-25T15:17:21.99Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-25T15:17:21.99Z"
             },
             {
               "$type": "Document",
@@ -264,20 +248,7 @@
               "RelativeToolTip": "Golejaus_kodas\\GolayCode\\GolayDecoding.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAE4AAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-25T15:17:30.961Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Scenario1.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\rugil\\Desktop\\Kodavimo teorija\\Golejaus_kodas\\Golejaus_kodas\\Forms\\Scenario1.cs",
-              "RelativeDocumentMoniker": "Golejaus_kodas\\Forms\\Scenario1.cs",
-              "ToolTip": "C:\\Users\\rugil\\Desktop\\Kodavimo teorija\\Golejaus_kodas\\Golejaus_kodas\\Forms\\Scenario1.cs [Design]",
-              "RelativeToolTip": "Golejaus_kodas\\Forms\\Scenario1.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-04T18:32:04.836Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-11-25T15:17:30.961Z"
             },
             {
               "$type": "Document",
@@ -289,8 +260,7 @@
               "RelativeToolTip": "Golejaus_kodas\\Forms\\Scenario2.Designer.cs",
               "ViewState": "AgIAADEAAAAAAAAAAAAMwEQAAABGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-04T18:44:09.458Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-04T18:44:09.458Z"
             },
             {
               "$type": "Document",
@@ -302,8 +272,29 @@
               "RelativeToolTip": "Golejaus_kodas\\Forms\\Scenario1.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-24T21:07:09.889Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-24T21:07:09.889Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\rugil\\Desktop\\Kodavimo teorija\\Golejaus_kodas\\Golejaus_kodas\\Forms\\Form1.cs",
+              "RelativeDocumentMoniker": "Golejaus_kodas\\Forms\\Form1.cs",
+              "ToolTip": "C:\\Users\\rugil\\Desktop\\Kodavimo teorija\\Golejaus_kodas\\Golejaus_kodas\\Forms\\Form1.cs [Design]*",
+              "RelativeToolTip": "Golejaus_kodas\\Forms\\Form1.cs [Design]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-24T19:43:43.93Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Scenario1.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\rugil\\Desktop\\Kodavimo teorija\\Golejaus_kodas\\Golejaus_kodas\\Forms\\Scenario1.cs",
+              "RelativeDocumentMoniker": "Golejaus_kodas\\Forms\\Scenario1.cs",
+              "ToolTip": "C:\\Users\\rugil\\Desktop\\Kodavimo teorija\\Golejaus_kodas\\Golejaus_kodas\\Forms\\Scenario1.cs [Design]",
+              "RelativeToolTip": "Golejaus_kodas\\Forms\\Scenario1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-04T18:32:04.836Z"
             },
             {
               "$type": "Document",
@@ -314,12 +305,7 @@
               "ToolTip": "C:\\Users\\rugil\\Desktop\\Kodavimo teorija\\Golejaus_kodas\\Golejaus_kodas\\Forms\\Scenario2.cs [Design]",
               "RelativeToolTip": "Golejaus_kodas\\Forms\\Scenario2.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-24T20:56:03.224Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{56df62a4-05a3-4e5b-aa1a-99371ccfb997}"
+              "WhenOpened": "2025-11-24T20:56:03.224Z"
             },
             {
               "$type": "Document",
@@ -331,8 +317,7 @@
               "RelativeToolTip": "Golejaus_kodas\\Forms\\Scenario1.Designer.cs",
               "ViewState": "AgIAAKAAAAAAAAAAAAAMwLMAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-24T21:07:02.961Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-24T21:07:02.961Z"
             },
             {
               "$type": "Document",
@@ -344,8 +329,7 @@
               "RelativeToolTip": "Golejaus_kodas\\ScenarioCode\\Scenario3Code.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAABoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-04T16:58:36.764Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-04T16:58:36.764Z"
             },
             {
               "$type": "Document",
@@ -357,8 +341,7 @@
               "RelativeToolTip": "Golejaus_kodas\\ScenarioCode\\Scenario2Code.cs",
               "ViewState": "AgIAAB8AAAAAAAAAAAAAACwAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-03T23:33:16.101Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-03T23:33:16.101Z"
             },
             {
               "$type": "Document",
@@ -370,8 +353,7 @@
               "RelativeToolTip": "Golejaus_kodas\\Helpers\\VectorTools.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAFIAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-26T12:17:39.003Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-26T12:17:39.003Z"
             },
             {
               "$type": "Document",
@@ -383,8 +365,7 @@
               "RelativeToolTip": "Golejaus_kodas\\Helpers\\MatrixArithmetic.cs",
               "ViewState": "AgIAABkAAAAAAAAAAAAQwC4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-25T21:35:29.813Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-25T21:35:29.813Z"
             },
             {
               "$type": "Document",
@@ -396,8 +377,7 @@
               "RelativeToolTip": "Golejaus_kodas\\Validation\\InputValidation.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-25T14:27:50.407Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-25T14:27:50.407Z"
             },
             {
               "$type": "Document",
@@ -432,8 +412,7 @@
               "ToolTip": "C:\\Users\\rugil\\Desktop\\Kodavimo teorija\\Golejaus_kodas\\Golejaus_kodas\\Forms\\Scenario1.resx",
               "RelativeToolTip": "Golejaus_kodas\\Forms\\Scenario1.resx",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
-              "WhenOpened": "2025-11-24T21:07:07.31Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-24T21:07:07.31Z"
             }
           ]
         }

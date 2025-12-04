@@ -30,7 +30,7 @@ namespace Golejaus_kodas.Helpers
             return new string(vectorCharArray);
         }
 
-        private static (int errorCount, List<int> errorPositions) getErrorInfo(byte[] originalVector, byte[] receivedVector)
+        public static (int errorCount, List<int> errorPositions) getErrorInfo(byte[] originalVector, byte[] receivedVector)
         {
             List<int> pos = new List<int>();
             int errorCount = 0;
