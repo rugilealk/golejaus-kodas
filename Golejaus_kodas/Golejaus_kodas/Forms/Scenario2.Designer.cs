@@ -88,11 +88,11 @@
             // 
             // submitInputTextButton
             // 
-            submitInputTextButton.Location = new Point(30, 366);
+            submitInputTextButton.Location = new Point(29, 366);
             submitInputTextButton.Name = "submitInputTextButton";
-            submitInputTextButton.Size = new Size(291, 29);
+            submitInputTextButton.Size = new Size(121, 29);
             submitInputTextButton.TabIndex = 10;
-            submitInputTextButton.Text = "Submit and send through channel";
+            submitInputTextButton.Text = "Submit text";
             submitInputTextButton.UseVisualStyleBackColor = true;
             submitInputTextButton.Click += submitInputTextButton_Click;
             // 
@@ -147,9 +147,9 @@
             submitErrorButton.Enabled = false;
             submitErrorButton.Location = new Point(30, 485);
             submitErrorButton.Name = "submitErrorButton";
-            submitErrorButton.Size = new Size(94, 29);
+            submitErrorButton.Size = new Size(255, 29);
             submitErrorButton.TabIndex = 18;
-            submitErrorButton.Text = "Submit";
+            submitErrorButton.Text = "Submit and send through channel";
             submitErrorButton.UseVisualStyleBackColor = true;
             submitErrorButton.Click += submitErrorButton_Click;
             // 

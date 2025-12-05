@@ -23,6 +23,7 @@ namespace Golejaus_kodas.ScenarioCode
             byte[] headerBytes = new byte[pixelOffset];
             byte[] pixelBytes = new byte[fileBytes.Length - pixelOffset];
 
+            // Antraštės ir pikselių duomenų atskirimas
             Array.Copy(fileBytes, 0, headerBytes, 0, pixelOffset);
             Array.Copy(fileBytes, pixelOffset, pixelBytes, 0, pixelBytes.Length);
 

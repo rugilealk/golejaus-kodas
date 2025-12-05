@@ -2,7 +2,6 @@
 using Golejaus_kodas.GolayCode;
 using Golejaus_kodas.Helpers;
 using Golejaus_kodas.Validation;
-using System.Data;
 using System.Globalization;
 
 namespace Golejaus_kodas.Forms

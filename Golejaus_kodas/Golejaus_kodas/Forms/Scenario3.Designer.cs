@@ -77,9 +77,9 @@
             openFileButton.Enabled = false;
             openFileButton.Location = new Point(29, 243);
             openFileButton.Name = "openFileButton";
-            openFileButton.Size = new Size(312, 42);
+            openFileButton.Size = new Size(134, 42);
             openFileButton.TabIndex = 10;
-            openFileButton.Text = "Press to look for file";
+            openFileButton.Text = "Select image";
             openFileButton.UseVisualStyleBackColor = true;
             openFileButton.Click += button1_Click;
             // 

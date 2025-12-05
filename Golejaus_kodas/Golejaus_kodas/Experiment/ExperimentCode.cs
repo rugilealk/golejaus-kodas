@@ -1,13 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Golejaus_kodas.Channel;
+﻿using Golejaus_kodas.Channel;
 using Golejaus_kodas.GolayCode;
 using Golejaus_kodas.Helpers;
-using System;
-using System.Drawing;
-using System.Windows.Forms;
-using System.Windows.Forms.DataVisualization.Charting;
 
 namespace Golejaus_kodas.Experiment
 {
