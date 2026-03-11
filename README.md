@@ -1,4 +1,4 @@
-#Golejaus_kodas
+# Golejaus_kodas
 
 An implementation of the binary Golay code (23, 12) which is capable to correct three bit errors. The implementation is programmed in C# and has a 
 Windows Forms graphical user interface.
